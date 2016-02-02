@@ -13,8 +13,8 @@ function count_children(nodes) {
 }
 
 function write_count(nodes) {
-    var total = count_children(nodes);
-    document.getElementById("node_count").textContent = total;
+    var count = count_children(nodes);
+    document.getElementById("node_count").textContent = count;
 }
 
 document.addEventListener('DOMContentLoaded', function () {

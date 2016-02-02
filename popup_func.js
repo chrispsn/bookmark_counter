@@ -1,22 +1,16 @@
 'use strict';
 
 function count_bookmarks(nodes) {
-    var folders = nodes.filter(has_children);
+    var folders = nodes.filter(n => 'children' in node);
     var count_below_this_folder = folders.map(n => n.children)
-                                .map(count_bookmarks)
-                                .reduce(sum, 0);
+                                         .map(count_bookmarks)
+                                         .reduce(sum, 0);
     return count_below_this_folder + (nodes.length - folders.length);
-}
-
-function has_children(node) {
-    return ("children" in node);
 }
 
 function sum(a, b) {
     return a + b;
 }
-
-// Get the answer to the user...
 
 function write_count(nodes) {
     var count = count_bookmarks(nodes);
