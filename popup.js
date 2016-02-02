@@ -1,3 +1,5 @@
+"use strict";
+
 // Docs: https://developer.chrome.com/extensions/bookmarks
 
 function count_children(nodes) {
@@ -10,7 +12,7 @@ function count_children(nodes) {
         }
     });
     return count;
-}
+};
 
 function write_count(bookmarkTreeNodes) {
     var total = count_children(bookmarkTreeNodes);
