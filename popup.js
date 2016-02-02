@@ -1,10 +1,10 @@
 'use strict';
 
-function count_children(nodes) {
+function count_bookmarks(nodes) {
     var count = 0;
     nodes.forEach(node => {
         if ('children' in node) {
-            count += count_children(node.children);
+            count += count_bookmarks(node.children);
         } else {
             count++;
         }
@@ -13,7 +13,7 @@ function count_children(nodes) {
 }
 
 function write_count(nodes) {
-    var count = count_children(nodes);
+    var count = count_bookmarks(nodes);
     document.getElementById('node_count').textContent = count;
 }
 
