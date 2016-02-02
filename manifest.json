@@ -1,0 +1,14 @@
+{
+  "name": "Bookmarks Count",
+  "version": "0.2",
+  "description": "Count the number of bookmarks.",
+  "permissions": [
+    "bookmarks"
+  ],
+  "browser_action": {
+      "default_title": "Bookmarks Count",
+      "default_icon": "icon.png",
+      "default_popup": "popup.html"
+  },
+  "manifest_version": 2
+}
