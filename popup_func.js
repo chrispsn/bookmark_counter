@@ -1,7 +1,7 @@
 'use strict';
 
 function count_bookmarks(nodes) {
-    var folders = nodes.filter(n => 'children' in node);
+    var folders = nodes.filter(n => 'children' in n);
     var count_below_this_folder = folders.map(n => n.children)
                                          .map(count_bookmarks)
                                          .reduce(sum, 0);
