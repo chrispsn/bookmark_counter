@@ -1,10 +1,4 @@
-// Docs: https://developer.chrome.com/extensions/
-// https://developer.chrome.com/extensions/bookmarks
-// http://cryto.net/~joepie91/blog/2015/05/04/functional-programming-in-javascript-map-filter-reduce/
-
-"use strict";
-
-// Calculate the answer...
+'use strict';
 
 function count_bookmarks(nodes) {
     var folders = nodes.filter(has_children);
@@ -32,4 +26,4 @@ function write_count(nodes) {
 document.addEventListener('DOMContentLoaded', function () {
     // getTree passes on an array of folders
     chrome.bookmarks.getTree(write_count);
-})
+});
