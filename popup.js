@@ -3,7 +3,7 @@
 function count_children(nodes) {
     var count = 0;
     nodes.forEach(node => {
-        if ("children" in node) {
+        if ('children' in node) {
             count += count_children(node.children);
         } else {
             count++;
@@ -14,7 +14,7 @@ function count_children(nodes) {
 
 function write_count(nodes) {
     var count = count_children(nodes);
-    document.getElementById("node_count").textContent = count;
+    document.getElementById('node_count').textContent = count;
 }
 
 document.addEventListener('DOMContentLoaded', function () {

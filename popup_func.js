@@ -14,7 +14,7 @@ function sum(a, b) {
 
 function write_count(nodes) {
     var count = count_bookmarks(nodes);
-    document.getElementById("node_count").textContent = count;
+    document.getElementById('node_count').textContent = count;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
