@@ -9,8 +9,7 @@ function count_bookmarks(nodes) {
 	var count_below_this_folder = folders.map(n => n.children)
 								.map(count_bookmarks)
 								.reduce(sum, 0);
-	var child_bookmarks = nodes.filter(not_decorator(has_children))
-	return count_below_this_folder + child_bookmarks.length;
+	return count_below_this_folder + (nodes.length - folders.length);
 }
 
 function has_children(node) {
@@ -19,10 +18,6 @@ function has_children(node) {
 
 function sum(a, b) {
 	return a + b;
-}
-
-function not_decorator(fn) {
-	return function (x) { return !(fn(x)) };
 }
 
 // Get the answer to the user...
