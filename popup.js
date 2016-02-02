@@ -12,9 +12,9 @@ function count_children(nodes) {
     return count;
 }
 
-function write_count(bookmarkTreeNodes) {
-    var total = count_children(bookmarkTreeNodes);
-    document.getElementById("node_count").innerText = total;
+function write_count(nodes) {
+    var total = count_children(nodes);
+    document.getElementById("node_count").textContent = total;
 }
 
 document.addEventListener('DOMContentLoaded', function () {
