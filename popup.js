@@ -1,6 +1,4 @@
-// Docs are here: https://developer.chrome.com/extensions/
-// https://developer.chrome.com/extensions/bookmarks
-// http://cryto.net/~joepie91/blog/2015/05/04/functional-programming-in-javascript-map-filter-reduce/
+// Docs are here: https://developer.chrome.com/extensions/bookmarks
 
 function count_children(nodes) {
 	var count = 0;
