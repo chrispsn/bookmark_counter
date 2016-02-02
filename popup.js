@@ -7,16 +7,13 @@
 function count_children(nodes) {
 	var count = 0;
 	nodes.forEach(node => {
-		if (has_children(node)) {
+		if ("children" in node) {
 			count += count_children(node.children)
-			count += node.children.filter(node => !has_children(node)).length;
-		};
+		} else {
+			count += 1;
+		}
 	});
 	return count;
-}
-
-function has_children(node) {
-	return ("children" in node);
 }
 
 // Perform calculations and get the answer to the user...
