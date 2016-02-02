@@ -1,4 +1,4 @@
-// Docs are here: https://developer.chrome.com/extensions/bookmarks
+// Docs: https://developer.chrome.com/extensions/bookmarks
 
 function count_children(nodes) {
     var count = 0;
