@@ -1,6 +1,6 @@
 {
   "name": "Bookmarks Counter",
-  "version": "0.2",
+  "version": "1.0",
   "description": "Count the number of bookmarks.",
   "permissions": [
     "bookmarks"
