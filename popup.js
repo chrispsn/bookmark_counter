@@ -26,7 +26,7 @@ function check_and_list_fatty(folder, max_leaves) {
 
 function write_fatty(title, count) {
     var text = document.createTextNode(title + ': ' + count);
-    var li = document.createElement('LI');
+    var li = document.createElement('li');
     li.appendChild(text);
     document.getElementById('fatty_list').appendChild(li);
 }
